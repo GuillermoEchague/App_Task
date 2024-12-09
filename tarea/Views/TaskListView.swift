@@ -12,6 +12,10 @@ struct TaskListView: View {
     @StateObject private var viewModel = TaskViewModel()
     @State private var isPresentingAddTaskView = false
     @State private var taskToEdit: Task?
+  
+    // Estados para la confirmación de eliminación
+       @State private var showAlert = false
+       @State private var indexToDelete: IndexSet? = nil
 
     var body: some View {
         NavigationStack {
@@ -32,7 +36,10 @@ struct TaskListView: View {
                         isPresentingAddTaskView = true
                     }
                 }
-                .onDelete(perform: viewModel.deleteTask)
+                .onDelete { offsets in
+                    indexToDelete = offsets // Guardamos el índice para eliminar
+                    showAlert = true         // Mostramos la alerta
+                }
             }
             .navigationTitle("Tareas")
             .toolbar {
@@ -47,6 +54,16 @@ struct TaskListView: View {
             }
             .sheet(isPresented: $isPresentingAddTaskView) {
                 AddTaskView(viewModel: viewModel, taskToEdit: taskToEdit)
+            }
+            .alert("¿Eliminar tarea?", isPresented: $showAlert) {
+                Button("Eliminar", role: .destructive) {
+                    if let index = indexToDelete {
+                        viewModel.deleteTask(at: index) // Eliminamos la tarea
+                    }
+                }
+                Button("Cancelar", role: .cancel) {
+                    indexToDelete = nil // Limpiamos el índice si se cancela
+                }
             }
         }
     }

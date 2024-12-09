@@ -14,6 +14,10 @@
 		9116E9922D07A14900DEBB82 /* tareaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9116E9912D07A14900DEBB82 /* tareaTests.swift */; };
 		9116E99C2D07A14900DEBB82 /* tareaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9116E99B2D07A14900DEBB82 /* tareaUITests.swift */; };
 		9116E99E2D07A14900DEBB82 /* tareaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9116E99D2D07A14900DEBB82 /* tareaUITestsLaunchTests.swift */; };
+		9116E9B02D07A1E700DEBB82 /* TaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9116E9AF2D07A1E700DEBB82 /* TaskListView.swift */; };
+		9116E9B22D07A1F900DEBB82 /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9116E9B12D07A1F900DEBB82 /* AddTaskView.swift */; };
+		9116E9B42D07A21000DEBB82 /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9116E9B32D07A21000DEBB82 /* TaskViewModel.swift */; };
+		9116E9B62D07A22200DEBB82 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9116E9B52D07A22200DEBB82 /* Task.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,10 @@
 		9116E9972D07A14900DEBB82 /* tareaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tareaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9116E99B2D07A14900DEBB82 /* tareaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tareaUITests.swift; sourceTree = "<group>"; };
 		9116E99D2D07A14900DEBB82 /* tareaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tareaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9116E9AF2D07A1E700DEBB82 /* TaskListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListView.swift; sourceTree = "<group>"; };
+		9116E9B12D07A1F900DEBB82 /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
+		9116E9B32D07A21000DEBB82 /* TaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
+		9116E9B52D07A22200DEBB82 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +102,9 @@
 		9116E97F2D07A14600DEBB82 /* tarea */ = {
 			isa = PBXGroup;
 			children = (
+				9116E9AC2D07A19600DEBB82 /* Views */,
+				9116E9AB2D07A18500DEBB82 /* ViewModels */,
+				9116E9AA2D07A17B00DEBB82 /* Models */,
 				9116E9802D07A14600DEBB82 /* tareaApp.swift */,
 				9116E9822D07A14600DEBB82 /* ContentView.swift */,
 				9116E9842D07A14900DEBB82 /* Assets.xcassets */,
@@ -125,6 +136,31 @@
 				9116E99D2D07A14900DEBB82 /* tareaUITestsLaunchTests.swift */,
 			);
 			path = tareaUITests;
+			sourceTree = "<group>";
+		};
+		9116E9AA2D07A17B00DEBB82 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9116E9B52D07A22200DEBB82 /* Task.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9116E9AB2D07A18500DEBB82 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				9116E9B32D07A21000DEBB82 /* TaskViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		9116E9AC2D07A19600DEBB82 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9116E9AF2D07A1E700DEBB82 /* TaskListView.swift */,
+				9116E9B12D07A1F900DEBB82 /* AddTaskView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +295,10 @@
 			files = (
 				9116E9832D07A14600DEBB82 /* ContentView.swift in Sources */,
 				9116E9812D07A14600DEBB82 /* tareaApp.swift in Sources */,
+				9116E9B02D07A1E700DEBB82 /* TaskListView.swift in Sources */,
+				9116E9B42D07A21000DEBB82 /* TaskViewModel.swift in Sources */,
+				9116E9B62D07A22200DEBB82 /* Task.swift in Sources */,
+				9116E9B22D07A1F900DEBB82 /* AddTaskView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,6 +470,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -459,6 +500,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
